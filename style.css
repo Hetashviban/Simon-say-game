@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(176, 229, 208, 1) 42%,
+    rgba(92, 202, 238, 0.41) 93.6%
+  );
+}
+
+.container {
+  text-align: center;
+  height: 77vh;
+  width: 40vw;
+  background-color: rgba(255, 255, 255, 0.454);
+  border-radius: 10px;
+  margin: 4em auto 0;
+}
+
+.text{
+    padding: 1rem;
+    line-height: 3rem;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+    border: 2px #000 solid;
+    margin: 0.5rem 2rem;
+}
+
+.yellow{
+    background-color: rgb(249, 249, 170);
+}
+
+.red{
+    background-color: rgb(253, 119, 119);
+}
+
+.blue{
+    background-color: rgb(139, 139, 245);
+}
+
+.green{
+    background-color: rgb(128, 240, 128);
+}

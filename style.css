@@ -32,12 +32,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-.circle{
-    border-radius: 50%;
-    width: 8em;
-    height: 8em;
+.square{
+    border-radius: 10%;
+    width: 7em;
+    height: 7em;
     border: 2px #000 solid;
-    margin: 0.5rem 2rem;
+    margin: 1rem;
 }
 
 .yellow{
@@ -54,4 +54,8 @@ body {
 
 .green{
     background-color: rgb(128, 240, 128);
+}
+
+.flash{
+  background-color: #fff;
 }

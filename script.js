@@ -8,10 +8,12 @@ let userSequence = [];
 
 let gameStarted = false; //Initially when the browser is loaded - gameStarted is false
 let level = 0; //And level is initially set to 0
+let highestScore = 0;
 
 let colors = ["red", "green", "blue", "yellow"]
 
-let h3 = document.querySelector("h3");
+let h4 = document.querySelector("h4");
+let h6 = document.querySelector("h6");
 
 document.addEventListener("keypress", function () {
     if (gameStarted == false) {
@@ -28,8 +30,8 @@ function levelUp() {
     userSequence = [];
     // Increment the level
     level++;
-    // Update the displayed level in the <h3> tag
-    h3.innerText = `Level ${level}`;
+    // Update the displayed level in the <h4> tag
+    h4.innerText = `Level ${level}`;
 
     // Choose a random button to flash
     let ran = Math.floor(Math.random() * 4); // Generates a random number between 0-3
@@ -81,7 +83,11 @@ function checkAnswer(indx){
         }
     }
     else{
-        h3.innerText = "Game over! Press any key to start again!";
+        if(level > highestScore){
+            highestScore = level;
+            h6.innerText = `Highest Score: ${highestScore}`;
+        }
+        h4.innerHTML = `Game over! Your score was <b>${level}</b> <br> Press any key to start again`;
         reset(); //This will reset the game when the game is over
     }
 }
